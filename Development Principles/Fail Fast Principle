@@ -1,0 +1,7 @@
+# The fail fast principle
+[Source](https://enterprisecraftsmanship.com/2015/09/15/fail-fast-principle/)
+
+The fail fast principle stands for stopping the current operation as soon as any unexpected error occurs. Adhering to this principle generally results in a more stable solution. It might appear counter-intuitive at first. How is it so that failing at any error leads to stability? Isn’t it backward?
+
+Indeed, when you start applying this practice, application crashes might seem overwhelming, especially if you have a working software whose developers didn’t stick to fail-fast before. But if you don’t give up, grit your teeth and fix all the code causing those failures, you will benefit from it greatly.
+
