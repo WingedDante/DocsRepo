@@ -1,0 +1,28 @@
+# Domain vs Applicaiton Services
+
+## Domain Services
+### Participate in Decision Making
+
+Domain services contain business logic and implementation details. They define _how_ something is to be done, hiding those details from the caller.
+
+## Application Services
+### Orchestrate Decisions
+
+Applicaiton services invoke buiness logic contained in Domain Services, but do not themselves make business decisions. An Applicaiton Service may use a combination of Domain Services to accomplish any given task. Application Services should not contain Implementation Details.
+
+# Implementation details
+
+## What is an Implementation Detail?
+
+To see if a class member is an implementation detail, you need to look at how it is used.
+
+In order for a class member to be a well-defined API, it must meet two requirements:
+
+- Address an immediate goal client code has to achieve.
+- Address that goal completely, yielding a full result in one go.
+
+A good rule of thumb here is to look at the number of operations the client code has to invoke on the class in order to achieve a single goal. If this number is higher than 1, then the class is most likely exposing some implementation details. Ideally, any individual goal the outside layer has to accomplish should be solved with a single operation only.
+
+## Further Reading
+- [Application vs Domain Services](https://enterprisecraftsmanship.com/2016/09/08/domain-services-vs-application-services/)
+- [What is an Implementation Detail?](https://enterprisecraftsmanship.com/2016/07/27/what-is-an-implementation-detail/)
